@@ -20,7 +20,7 @@
         text-decoration: none;
       }
 
-      .text-right a {
+      .text-end a {
         text-decoration: none;
       }
 
@@ -30,7 +30,8 @@
       .col-md-4 button {
         display: block; /* Make the button a block element */
         margin: 0 auto; /* Center the button horizontally */
-        padding: 15px 30px; /* Adjust padding as desired */
+        width: 100%;
+        max-width: 300px;
         background-color: #007bff; /* Button color */
         color: #fff; /* Text color */
         border: none; /* Remove default border */
@@ -48,11 +49,13 @@
         text-align: right;
       }
 
-      .img-fluid img {
-        width: 500px;
-        margin-bottom: 30px;
-      }
-
+   .product-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
       .product-info table {
         width: 100%;
         border-collapse: collapse;
@@ -145,12 +148,11 @@
         margin-bottom: 60px;
       }
 
-      .col-6.productlist figure img {
-        display: block; /* Make each image a block element */
-        margin: 0 auto; /* Center each image horizontally within its figure */
-        width: 60%;
-        margin-bottom: 20px;
-      }
+      .productlist figure img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
       /* 搜尋 */
       .search-container {
         display: flex;
@@ -185,16 +187,58 @@
       .fade-in {
         animation: fadeIn 2s ease-in-out;
       }
+      .navbar {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}  
+
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .productlist figure img {
+    max-width: 180px;
+  }
+
+  .social-media {
+    text-align: center;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .search-container {
+    padding: 10px;
+  }
+
+  .col-md-4 button {
+    width: 100%;
+  }
+}
     </style>
   </head>
   <body>
     <header class="bg-light fade-in">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-2">
+          <div class="col-4 col-md-2">
             <img src="img/圖標.jpg" alt="圖標" width="50" />
           </div>
-          <div class="col-8 text-center">
+          <div class="col-12 col-md-8 text-center order-3 order-md-2">
             <ul class="list-inline navbar">
               <li class="list-inline-item vertical-line">
                 <a href="https://tasoyujia.github.io/iphone-store/">首頁</a>
@@ -214,39 +258,43 @@
               <li class="list-inline-item vertical-line"></li>
             </ul>
           </div>
-          <div class="col-2 text-right">
+          <div class="col-8 col-md-2 text-end order-2 order-md-3">
             <a href="#"><i class="fas fa-user"></i> 註冊</a> /
             <a href="#"><i class="fas fa-sign-in-alt"></i> 登陸</a>
           </div>
         </div>
       </div>
     </header>
-    <div class="search-container fade-in">
-      <div class="search-box" id="searchBox">
-        <input
-          type="text"
-          class="search-input form-control"
-          placeholder="Search..."
-        />
-        <button class="search-btn btn btn-success" onclick="toggleSearchBox()">
-          Search
-        </button>
-      </div>
-    </div>
+    <div class="row g-2">
+  <div class="col-md-10">
+    <input
+      type="text"
+      class="search-input form-control"
+      placeholder="Search..."
+    />
+  </div>
+
+  <div class="col-md-2">
+    <button class="search-btn btn btn-success">
+      Search
+    </button>
+  </div>
+</div>
     <div class="container mt-5 img-fluid fade-in">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-12 col-md-4">
           <img
-            src="img/Apple iPhone 15 Pro Max.png"
-            alt="Apple iPhone 15 Pro"
-          />
+  src="img/Apple iPhone 15 Pro Max.png"
+  alt="Apple iPhone 15 Pro"
+  class="product-image"
+/>
           <h1 class="text-danger text-center">TWD4300</h1>
           <button class="text-center">加入購物車</button>
         </div>
 
-        <div class="col-md-8">
+        <div class="col-12 col-md-8">
           <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
               <h2>Apple iPhone 15 Pro</h2>
               <hr />
 
@@ -299,7 +347,7 @@
                 <a href="#"><i class="fab fa-instagram"></i></a>
               </div>
             </div>
-            <div class="col-6 productlist">
+            <div class="col-12 col-lg-6 productlist">
               <h2>其他人還會喜歡</h2>
               <hr />
               <figure>

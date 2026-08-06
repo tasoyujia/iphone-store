@@ -32,7 +32,7 @@
       .navbar a {
         text-decoration: none;
       }
-      .text-right a {
+      .text-end a {
         text-decoration: none;
       }
       .carousel-item img {
@@ -166,6 +166,27 @@
       .fade-in {
         animation: fadeIn 2s ease-in-out;
       }
+      .navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 0;
+}
+
+@media (max-width:768px){
+
+  .navbar{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .navbar li{
+    margin:5px 0;
+  }
+
+}
     </style>
   </head>
   <body>
@@ -173,11 +194,11 @@
     <header class="bg-light fade-in">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-2">
+          <div class="col-4 col-md-2">
             <!-- 左側圖標 -->
             <img src="img/圖標.jpg" alt="圖標" width="50" />
           </div>
-          <div class="col-8 text-center">
+          <div class="col-12 col-md-8 text-center order-3 order-md-2">
             <!-- 中間導航 -->
             <ul class="list-inline navbar">
               <li class="list-inline-item vertical-line">
@@ -194,25 +215,28 @@
               </li>
             </ul>
           </div>
-          <div class="col-2 text-right">
+          <div class="col-8 col-md-2 text-end order-2 order-md-3">
             <a href="#"><i class="fas fa-user"></i> 註冊</a> /
             <a href="#"><i class="fas fa-sign-in-alt"></i> 登陸</a>
           </div>
         </div>
       </div>
     </header>
-    <div class="search-container fade-in">
-      <div class="search-box" id="searchBox">
-        <input
-          type="text"
-          class="search-input form-control"
-          placeholder="Search..."
-        />
-        <button class="search-btn btn btn-success" onclick="toggleSearchBox()">
-          Search
-        </button>
-      </div>
-    </div>
+    <div class="row g-2">
+  <div class="col-md-10">
+    <input
+      type="text"
+      class="search-input form-control"
+      placeholder="Search..."
+    />
+  </div>
+
+  <div class="col-md-2">
+    <button class="search-btn btn btn-success">
+      Search
+    </button>
+  </div>
+</div>
 
     <h1 class="text-center h fade-in"><strong>潮</strong>通信行</h1>
     <div class="container fade-in">
