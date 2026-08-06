@@ -191,77 +191,83 @@
 
     @media (max-width:768px) {
 
-      .navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      .navbar-nav {
+        width: 100%;
+        text-align: center;
       }
 
-      .navbar li {
-        margin: 5px 0;
+      .navbar-nav .nav-item {
+        width: 100%;
       }
 
+      .navbar-collapse {
+        text-align: center;
+      }
+
+    }
+
+    .navbar-collapse {
+      position: relative;
+    }
+
+    .navbar-nav {
+      margin: 0 auto;
     }
   </style>
 </head>
 
 <body>
   <!-- Header -->
-      <header class="bg-light">
-  <div class="container">
+  <header class="bg-light">
+    <div class="container">
 
-    <nav class="navbar navbar-expand-md">
+      <nav class="navbar navbar-expand-md">
 
-      <a class="navbar-brand" href="#">
-        <img src="img/圖標.jpg" width="50">
-      </a>
+        <a class="navbar-brand" href="#">
+          <img src="img/圖標.jpg" width="50">
+        </a>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNav"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <i class="fas fa-bars"></i>
+        </button>
 
-      <div class="collapse navbar-collapse" id="mainNav">
+        <div class="collapse navbar-collapse" id="mainNav">
 
-        <ul class="navbar-nav mx-auto">
+          <ul class="navbar-nav mx-auto">
 
-          <li class="nav-item">
-            <a class="nav-link" href="https://tasoyujia.github.io/iphone-store/">首頁</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://tasoyujia.github.io/iphone-store/">首頁</a>
+            </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#">商品分類</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">商品分類</a>
+            </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#">最新上架</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">最新上架</a>
+            </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#">熱門商品</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">熱門商品</a>
+            </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#">品牌新聞</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">品牌新聞</a>
+            </li>
 
-        </ul>
+          </ul>
 
-        <div>
-          <a href="#">註冊</a> /
-          <a href="#">登入</a>
+          <div class=" d-md-block">
+            <a href="#">註冊</a> /
+            <a href="#">登入</a>
+          </div>
+
         </div>
 
-      </div>
+      </nav>
 
-    </nav>
-
-  </div>
-</header>
+    </div>
+  </header>
   <div class="row g-2">
     <div class="col-md-10">
       <input type="text" class="search-input form-control" placeholder="Search..." />
